@@ -1,1 +1,36 @@
+{% extends "base.html" %}
 
+{% block content %}
+<a href="/add">Adicionar Livro</a>
+<br><br>
+
+<table border="1">
+    <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Status</th>
+        <th>Ação</th>
+    </tr>
+
+    {% for book in books %}
+    <tr>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>
+            {% if book.available == 1 %}
+                Disponível
+            {% else %}
+                Emprestado
+            {% endif %}
+        </td>
+        <td>
+            {% if book.available == 1 %}
+                <a href="/borrow/{{ book.id }}">Emprestar</a>
+            {% else %}
+                <a href="/return/{{ book.id }}">Devolver</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
