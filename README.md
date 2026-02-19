@@ -1,6 +1,3 @@
-Perfeito 😎💻
-Segue um README.md completo e profissional, pronto para você colocar no seu projeto no GitHub.
-
 📚 Biblioteca Digital – Sistema de Gestão
 
 Sistema web simples para gerenciamento de biblioteca, desenvolvido em Python + Flask + SQLite, permitindo cadastro, listagem, empréstimo e devolução de livros.
